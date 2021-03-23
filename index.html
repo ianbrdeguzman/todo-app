@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+        <link rel="stylesheet" href="./css/style.css" />
+        <script src="./js/app.js" type="module"></script>
+        <title>Frontend Mentor | Todo app</title>
+    </head>
+    <body>
+        <header>
+            <h1>Todo</h1>
+            <button>
+                <img src="./images/icon-sun.svg" alt="Light Theme" />
+            </button>
+        </header>
+        <div class="app">
+            <div class="app-header">
+                <form>
+                    <input
+                        type="text"
+                        name="todo"
+                        aria-label="Create a new todo..."
+                        placeholder="Create a new todo..."
+                    />
+                </form>
+            </div>
+            <div class="app-main">
+                <ul>
+                    <li class="checked">
+                        <input
+                            type="checkbox"
+                            name="complete"
+                            class="complete"
+                            aria-label="complete"
+                            checked
+                        />
+                        <p>Complete online JavaScript course</p>
+                        <button class="remove">
+                            <img src="./images/icon-cross.svg" alt="remove" />
+                        </button>
+                    </li>
+                    <li>
+                        <input
+                            type="checkbox"
+                            name="complete"
+                            class="complete"
+                            aria-label="complete"
+                        />
+                        <p>Jog around the park 3x</p>
+                        <button class="remove">
+                            <img src="./images/icon-cross.svg" alt="remove" />
+                        </button>
+                    </li>
+                    <li>
+                        <input
+                            type="checkbox"
+                            name="complete"
+                            class="complete"
+                            aria-label="complete"
+                        />
+                        <p>10 minute meditation</p>
+                        <button class="remove">
+                            <img src="./images/icon-cross.svg" alt="remove" />
+                        </button>
+                    </li>
+                    <li>
+                        <input
+                            type="checkbox"
+                            name="complete"
+                            class="complete"
+                            aria-label="complete"
+                        />
+                        <p>Read for 1 hour</p>
+                        <button class="remove">
+                            <img src="./images/icon-cross.svg" alt="remove" />
+                        </button>
+                    </li>
+                    <li>
+                        <input
+                            type="checkbox"
+                            name="complete"
+                            class="complete"
+                            aria-label="complete"
+                        />
+                        <p>Pick up groceries</p>
+                        <button class="remove">
+                            <img src="./images/icon-cross.svg" alt="remove" />
+                        </button>
+                    </li>
+                    <li>
+                        <input
+                            type="checkbox"
+                            name="complete"
+                            class="complete"
+                            aria-label="complete"
+                        />
+                        <p>Complete Todo App on Frontend Mentor</p>
+                        <button class="remove">
+                            <img src="./images/icon-cross.svg" alt="remove" />
+                        </button>
+                    </li>
+                    <li class="clear-container">
+                        <p><span id="todo-left">5</span> items left</p>
+                        <button id="clear-completed">Clear Completed</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="app-footer">
+                <button id="all" class="filter">All</button>
+                <button id="active" class="filter">Active</button>
+                <button id="completed" class="filter">Completed</button>
+            </div>
+        </div>
+        <div class="info">
+            <p>Drag and drop to reorder list</p>
+        </div>
+        <div class="attribution">
+            Challenge by
+            <a
+                href="https://www.frontendmentor.io?ref=challenge"
+                target="_blank"
+                >Frontend Mentor</a
+            >. Coded by <a href="#">Your Name Here</a>.
+        </div>
+    </body>
+</html>

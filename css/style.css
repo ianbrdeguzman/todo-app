@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  background-color: #161722;
+  background-image: url(../images/bg-mobile-dark.jpg);
+  background-size: 100% 200px;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+header {
+  width: 85vw;
+  max-width: 540px;
+  margin: 3rem auto 2rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+header button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+.app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app div:first-child {
+  width: 85vw;
+  max-width: 540px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.app div:first-child form {
+  position: relative;
+}
+
+.app div:first-child form input {
+  width: 100%;
+  font-family: inherit;
+  padding: 1rem 3rem;
+  border: none;
+  outline: none;
+  color: #cacde8;
+  background-color: #25273c;
+}
+
+.app div:first-child form::before {
+  content: '';
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid #4d5066;
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.app div:nth-child(2) {
+  width: 85vw;
+  max-width: 540px;
+  margin: 1rem 0;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #25273c;
+}
+
+.app div:nth-child(2) ul {
+  list-style: none;
+}
+
+.app div:nth-child(2) ul li {
+  color: #cacde8;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.app div:nth-child(2) ul li input {
+  cursor: pointer;
+  margin-left: 0.1rem;
+}
+
+.app div:nth-child(2) ul li input::before {
+  content: '';
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid #4d5066;
+  background-color: #25273c;
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.app div:nth-child(2) ul li input:checked:before {
+  background-image: url(../images/icon-check.svg), -webkit-gradient(linear, left top, left bottom, from(#57ddff), to(#c058f3));
+  background-image: url(../images/icon-check.svg), linear-gradient(#57ddff, #c058f3);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.app div:nth-child(2) ul li p {
+  cursor: move;
+  font-size: 0.8rem;
+  margin: 0 1rem;
+  text-align: left;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  white-space: nowrap;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.app div:nth-child(2) ul li p::-webkit-scrollbar {
+  display: none;
+}
+
+.app div:nth-child(2) ul li button {
+  background: transparent;
+  border: none;
+}
+
+.app div:nth-child(2) ul li button img {
+  cursor: pointer;
+}
+
+.app div:nth-child(2) ul li .remove {
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+}
+
+.app div:nth-child(2) ul li:last-child {
+  color: #4d5066;
+  border: none;
+}
+
+.app div:nth-child(2) ul li:last-child p {
+  cursor: unset;
+}
+
+.app div:nth-child(2) ul li:last-child button {
+  cursor: pointer;
+  color: inherit;
+  font-family: inherit;
+  font-size: 0.8rem;
+}
+
+.app div:nth-child(2) ul li:last-child button:hover {
+  color: #e4e5f1;
+}
+
+.app div:nth-child(2) ul li.checked p {
+  color: #4d5066;
+  text-decoration: line-through;
+}
+
+.app div:nth-child(2) ul li.hidden {
+  display: none;
+}
+
+.app div:last-child {
+  width: 85vw;
+  max-width: 540px;
+  height: 45px;
+  padding: 1rem 0;
+  border-radius: 5px;
+  background-color: #25273c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app div:last-child button {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  margin: 0 1rem;
+  border: none;
+  color: #4d5066;
+  background: transparent;
+}
+
+.app div:last-child button:first-child {
+  color: #3a7bfd;
+}
+
+.app div:last-child button:hover {
+  color: #e4e5f1;
+}
+
+.info {
+  font-size: 0.9rem;
+  margin: 2rem 0;
+  color: #4d5066;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.attribution {
+  width: 100%;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+@media (min-width: 768px) {
+  body {
+    background-image: url(../images/bg-desktop-dark.jpg);
+    background-size: 100% 300px;
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+  header {
+    margin: 5rem auto 3rem auto;
+  }
+  header h1 {
+    font-size: 2.5rem;
+  }
+  .app div:first-child form input {
+    height: 64px;
+    font-size: 1.2rem;
+    padding: 1rem 4rem;
+  }
+  .app div:first-child form::before {
+    width: 24px;
+    height: 24px;
+  }
+  .app div:nth-child(2) ul li {
+    height: 64px;
+  }
+  .app div:nth-child(2) ul li input::before {
+    width: 24px;
+    height: 24px;
+  }
+  .app div:nth-child(2) ul li p {
+    font-size: 1.2rem;
+    margin: 0 2rem;
+  }
+  .app div:nth-child(2) ul li .remove {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+/*# sourceMappingURL=style.css.map */
