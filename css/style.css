@@ -82,6 +82,10 @@ header button {
   background-color: #25273c;
 }
 
+.app div:first-child form input::-webkit-input-placeholder {
+  color: #4d5066;
+}
+
 .app div:first-child form::before {
   content: '';
   display: block;
@@ -170,6 +174,15 @@ header button {
   display: none;
 }
 
+.app div:nth-child(2) ul li p.checked {
+  color: #4d5066;
+  text-decoration: line-through;
+}
+
+.app div:nth-child(2) ul li p.over {
+  opacity: 0.5;
+}
+
 .app div:nth-child(2) ul li button {
   background: transparent;
   border: none;
@@ -202,11 +215,6 @@ header button {
 
 .app div:nth-child(2) ul li:last-child button:hover {
   color: #e4e5f1;
-}
-
-.app div:nth-child(2) ul li.checked p {
-  color: #4d5066;
-  text-decoration: line-through;
 }
 
 .app div:nth-child(2) ul li.hidden {
@@ -271,6 +279,90 @@ header button {
   color: #3e52a3;
 }
 
+.light-mode {
+  background-color: #fafafa;
+  background-image: url(../images/bg-mobile-light.jpg);
+}
+
+.light-mode .app div:first-child form input {
+  color: #484b6a;
+  background-color: white;
+}
+
+.light-mode .app div:first-child form input::-webkit-input-placeholder {
+  color: #9394a5;
+}
+
+.light-mode .app div:first-child form::before {
+  border: 1px solid #d2d3db;
+}
+
+.light-mode .app div:nth-child(2) {
+  background-color: white;
+}
+
+.light-mode .app div:nth-child(2) ul li {
+  color: #484b6a;
+  border-bottom: 1px solid #e4e5f1;
+}
+
+.light-mode .app div:nth-child(2) ul li input::before {
+  border: 1px solid #d2d3db;
+  background-color: white;
+}
+
+.light-mode .app div:nth-child(2) ul li.checked p {
+  color: #d2d3db;
+}
+
+.light-mode .app div:nth-child(2) ul li:last-child {
+  color: #9394a5;
+  border: none;
+}
+
+.light-mode .app div:nth-child(2) ul li:last-child p {
+  cursor: unset;
+}
+
+.light-mode .app div:nth-child(2) ul li:last-child button {
+  cursor: pointer;
+  color: inherit;
+  font-family: inherit;
+  font-size: 0.8rem;
+}
+
+.light-mode .app div:nth-child(2) ul li:last-child button:hover {
+  color: #484b6a;
+}
+
+.light-mode .app div:last-child {
+  background-color: white;
+}
+
+.light-mode .app div:last-child button {
+  color: #9394a5;
+}
+
+.light-mode .app div:last-child button:first-child {
+  color: #3a7bfd;
+}
+
+.light-mode .app div:last-child button:hover {
+  color: #484b6a;
+}
+
+.light-mode .info {
+  color: #9394a5;
+}
+
+.light-mode .attribution {
+  color: #9394a5;
+}
+
+.light-mode .attribution a {
+  color: #3e52a3;
+}
+
 @media (min-width: 768px) {
   body {
     background-image: url(../images/bg-desktop-dark.jpg);
@@ -284,9 +376,12 @@ header button {
   header h1 {
     font-size: 2.5rem;
   }
+  .app {
+    position: relative;
+  }
   .app div:first-child form input {
     height: 64px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 1rem 4rem;
   }
   .app div:first-child form::before {
@@ -301,12 +396,20 @@ header button {
     height: 24px;
   }
   .app div:nth-child(2) ul li p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin: 0 2rem;
   }
   .app div:nth-child(2) ul li .remove {
     -webkit-transform: scale(1);
             transform: scale(1);
+  }
+  .app div:nth-child(2) ul li:last-child button {
+    font-size: 1rem;
+  }
+  .app div:last-child {
+    width: auto;
+    position: absolute;
+    bottom: 1.6rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

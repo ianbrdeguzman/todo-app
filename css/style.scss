@@ -78,6 +78,9 @@ header {
                 outline: none;
                 color: $dt-light-grayish-blue;
                 background-color: $dt-very-dark-saturated-blue;
+                &::-webkit-input-placeholder {
+                    color: $dt-very-dark-grayish-blue;
+                }
             }
             &::before {
                 content: '';
@@ -146,6 +149,13 @@ header {
                     &::-webkit-scrollbar {
                         display: none;
                     }
+                    &.checked {
+                        color: $dt-very-dark-grayish-blue;
+                        text-decoration: line-through;
+                    }
+                    &.over {
+                        opacity: 0.5;
+                    }
                 }
                 button {
                     background: transparent;
@@ -171,12 +181,6 @@ header {
                         &:hover {
                             color: $dt-light-grayish-blue-hover;
                         }
-                    }
-                }
-                &.checked {
-                    p {
-                        color: $dt-very-dark-grayish-blue;
-                        text-decoration: line-through;
                     }
                 }
                 &.hidden {
@@ -227,6 +231,83 @@ header {
         color: hsl(228, 45%, 44%);
     }
 }
+.light-mode {
+    background-color: $lt-very-light-gray;
+    background-image: url(../images/bg-mobile-light.jpg);
+    .app {
+        div:first-child {
+            form {
+                input {
+                    color: $lt-very-dark-grayish-blue;
+                    background-color: $primary-white;
+                    &::-webkit-input-placeholder {
+                        color: $lt-dark-grayish-blue;
+                    }
+                }
+                &::before {
+                    border: 1px solid $lt-light-grayish-blue;
+                }
+            }
+        }
+        div:nth-child(2) {
+            background-color: $primary-white;
+            ul {
+                li {
+                    color: $lt-very-dark-grayish-blue;
+                    border-bottom: 1px solid $lt-very-light-grayish-blue;
+                    input {
+                        &::before {
+                            border: 1px solid $lt-light-grayish-blue;
+                            background-color: $primary-white;
+                        }
+                    }
+                    &.checked {
+                        p {
+                            color: $lt-light-grayish-blue;
+                        }
+                    }
+                    &:last-child {
+                        color: $lt-dark-grayish-blue;
+                        border: none;
+                        p {
+                            cursor: unset;
+                        }
+                        button {
+                            cursor: pointer;
+                            color: inherit;
+                            font-family: inherit;
+                            font-size: 0.8rem;
+                            &:hover {
+                                color: $lt-very-dark-grayish-blue;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        div:last-child {
+            background-color: $primary-white;
+            button {
+                color: $lt-dark-grayish-blue;
+                &:first-child {
+                    color: $primary-bright-blue;
+                }
+                &:hover {
+                    color: $lt-very-dark-grayish-blue;
+                }
+            }
+        }
+    }
+    .info {
+        color: $lt-dark-grayish-blue;
+    }
+    .attribution {
+        color: $lt-dark-grayish-blue;
+        a {
+            color: hsl(228, 45%, 44%);
+        }
+    }
+}
 @media (min-width: 768px) {
     body {
         background-image: url(../images/bg-desktop-dark.jpg);
@@ -241,11 +322,12 @@ header {
         }
     }
     .app {
+        position: relative;
         div:first-child {
             form {
                 input {
                     height: 64px;
-                    font-size: 1.2rem;
+                    font-size: 1rem;
                     padding: 1rem 4rem;
                 }
                 &::before {
@@ -265,14 +347,24 @@ header {
                         }
                     }
                     p {
-                        font-size: 1.2rem;
+                        font-size: 1rem;
                         margin: 0 2rem;
                     }
                     .remove {
                         transform: scale(1);
                     }
+                    &:last-child {
+                        button {
+                            font-size: 1rem;
+                        }
+                    }
                 }
             }
+        }
+        div:last-child {
+            width: auto;
+            position: absolute;
+            bottom: 1.6rem;
         }
     }
 }
