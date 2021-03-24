@@ -33,16 +33,16 @@ class UI {
         if (icon.id == 'theme') return;
         body.classList.toggle('light-mode');
         icon.src.endsWith('sun.svg')
-            ? (icon.src = '../images/icon-moon.svg')
-            : (icon.src = '../images/icon-sun.svg');
+            ? (icon.src = './images/icon-moon.svg')
+            : (icon.src = './images/icon-sun.svg');
         if (screen.width > 768 && !icon.src.endsWith('sun.svg')) {
-            body.style.backgroundImage = 'url(../images/bg-desktop-light.jpg)';
+            body.style.backgroundImage = 'url(./images/bg-desktop-light.jpg)';
         } else if (screen.width > 768 && icon.src.endsWith('sun.svg')) {
-            body.style.backgroundImage = 'url(../images/bg-desktop-dark.jpg)';
+            body.style.backgroundImage = 'url(./images/bg-desktop-dark.jpg)';
         } else if (screen.width < 768 && !icon.src.endsWith('sun.svg')) {
-            body.style.backgroundImage = 'url(../images/bg-mobile-light.jpg';
+            body.style.backgroundImage = 'url(./images/bg-mobile-light.jpg';
         } else if (screen.width < 768 && icon.src.endsWith('sun.svg')) {
-            body.style.backgroundImage = 'url(../images/bg-mobile-dark.jpg';
+            body.style.backgroundImage = 'url(./images/bg-mobile-dark.jpg';
         }
     }
     createTodo(todo, container) {
