@@ -1,6 +1,6 @@
 # Frontend Mentor - Todo app
 
-Check it out [here!]()
+Check it out [here!](https://ianbrdeguzman.github.io/todo-app/)
 
 ## Created using:
 
