@@ -27,7 +27,10 @@ class App {
     formSubmit() {
         this.DOMElements.form.addEventListener('submit', (e) => {
             e.preventDefault();
-            console.log('submitted');
+            if (!this.DOMElements.input.value) {
+                alert('Enter to-do...');
+                return;
+            }
             ui.createTodo(
                 this.DOMElements.input.value,
                 this.DOMElements.container

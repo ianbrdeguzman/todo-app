@@ -328,7 +328,7 @@ header button {
   cursor: pointer;
   color: inherit;
   font-family: inherit;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .light-mode .app div:nth-child(2) ul li:last-child button:hover {
